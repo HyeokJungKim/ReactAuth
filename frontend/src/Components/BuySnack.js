@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class BuySnack extends Component {
+  
   state={
     name: ""
   }
@@ -23,7 +24,6 @@ class BuySnack extends Component {
           <input type="text" name="name" value={this.state.name} onChange={this.handleChange}/>
         </label>
         <input type="submit" value="Log a New Snack"/>
-
       </form>
     );
   }
