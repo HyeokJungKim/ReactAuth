@@ -6,9 +6,10 @@ import {Switch, Route} from 'react-router-dom'
 import Header from './Components/Header'
 import ProfileContainer from './Containers/ProfileContainer'
 import LoginForm from './Components/LoginForm'
+import RegisterForm from './Components/RegisterForm'
 
 class App extends Component {
-  
+
   state = {
     user: {
       id: 0,
@@ -24,6 +25,7 @@ class App extends Component {
         <Header/>
         <Switch>
           <Route path="/login" render={()=> <LoginForm/> }/>
+          <Route path="/register" render={()=> <RegisterForm/> }/>
           <Route path="/profile" render={()=> <ProfileContainer user={this.state.user}/> }/>
         </Switch>
       </div>

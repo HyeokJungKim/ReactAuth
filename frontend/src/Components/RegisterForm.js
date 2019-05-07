@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 
-class LoginForm extends Component {
+class RegisterForm extends Component {
 
   state={
     username: "",
-    password: ""
+    password: "",
+    bio: ""
   }
 
   handleChange = (event) => {
@@ -21,8 +22,17 @@ class LoginForm extends Component {
   render() {
     return (
       <div>
-        <h2>Login Form</h2>
+        <h2>Register Form</h2>
         <form onSubmit={this.handleSubmit}>
+          <label>
+            Bio:
+            <input
+              type="text"
+              name="bio"
+              value={this.state.bio}
+              onChange={this.handleChange}
+            />
+          </label>
           <label>
             Username:
             <input
@@ -41,7 +51,7 @@ class LoginForm extends Component {
               onChange={this.handleChange}
             />
           </label>
-          <input type="submit" value="Login"/>
+          <input type="submit" value="Register"/>
         </form>
       </div>
     );
@@ -49,4 +59,4 @@ class LoginForm extends Component {
 
 }
 
-export default LoginForm;
+export default RegisterForm;
